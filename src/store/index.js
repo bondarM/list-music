@@ -42,7 +42,7 @@ export default new Vuex.Store({
         .post(`http://ws.audioscrobbler.com/2.0/?method=track.search&track=${value}&api_key=ba2dce79000a3bf8d7c9a6c2da6981be&format=json`)
         .then((res) => {
           state.search = res.data.results.trackmatches
-         console.log(res.data.results.trackmatches);
+        
         })
         .catch((err) => {
           console.log(err);
